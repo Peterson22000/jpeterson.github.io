@@ -1,0 +1,113 @@
+<!doctype html>
+
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Zoltan the Fortune Teller</title>
+            
+            <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <link rel="stylesheet" href="main.css">
+            <script type="text/javascript" src="sarissa.js"></script> 
+            <style>
+            #accordion-resizer {
+              padding: 10px;
+              width: 350px;
+              height: 220px;
+            }
+            </style>
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="script.js"></script>
+            <script>
+            $( function() {
+              $( "#accordion" ).accordion({
+                heightStyle: "fill"
+              });
+           
+              $( "#accordion-resizer" ).resizable({
+                minHeight: 140,
+                minWidth: 200,
+                resize: function() {
+                  $( "#accordion" ).accordion( "refresh" );
+                }
+              });
+            } );
+            </script>
+    </head>
+    <body>
+            <h3 class="docs">Choose a color.</h3>
+ 
+            <div id="accordion-resizer" class="ui-widget-content">
+              <div id="accordion">
+                <h3>Yellow</h3>
+                <div>
+                    <li class="q">What is your fortune?</li>
+                    <li class="a">You will receive a million dollars.</li>
+                    <input type="checkbox" name="checkbox1"><br>
+
+                    <input type="checkbox" name="checkbox2"><br>
+                    <input type="checkbox" name="checkbox3"><br>
+                   
+                  <p>You will receive a million dollars.</p>
+                </div>
+                <h3>Red</h3>
+                <div>
+                      
+                  <p>The next person you meet will become a good friend. </p>
+                </div>
+                <h3>Blue</h3>
+                <div>
+                       
+                  <p>Great prizes await you. </p>
+                  <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                  </ul>
+                </div>
+                <h3>Green</h3>
+                <div>
+                      
+                  <p>You will find great success in business. </p>
+                </div>
+              </div>
+            </div>
+
+            <fieldset>
+                <legend><b>1:Personal Information</b></b></legend>
+                First Name: <br>
+                <input type="text" name="firstname"><br>
+                Last Name: <br>
+                <input type="text" name="lastname"<br>
+
+            </fieldset>
+            
+            <fieldset>
+                    <legend><b>2:Sex</b></b></legend>
+                    Male: <br>
+                    <input type="radio" name="choices" value="choice1"><br>
+                    Female: <br>
+                    <input type="radio" name="choices" value="choice2"><br>
+                    Other: <br>
+                    <input type="radio" name="choices" value="choice3"><br>
+            </fieldset>
+
+            <fieldset>
+                    <legend><b>3:Country</b></b></legend>
+                    <select name="continent"size"1">
+                            <option value="namerica">Canada</option>
+                            <option value="europe">Europe</option>
+                            <option value="unitedkingdom">Great Britian</option>
+                            <option value="samerica">United States</option>
+                            <option value="namerica">Other</option><br>
+            </fieldset><br>
+        
+            </select>
+                <input type="submit" value="submit">
+                <input type="reset">
+
+            </form>
+             
+        
+    </body>
+</html>
