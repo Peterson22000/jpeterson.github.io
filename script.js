@@ -1,28 +1,14 @@
-var fortune = [
-    {
-        "fortuneOne": "Look around; happiness is trying to catch you.",
-        "fortuneTwo": "To truly find yourself you should play hide and seek alone.",
-        "fortuneThree": "You can't have everything... where would you put it all?",
-    },
-    {
-        "fortuneFour": "run.",
-        "fortuneFive": "The rubberbands are heading in the right direction.",
-        "fortuneSix": "Do or do not. There is no try."
-    },
-    {
-        "fortuneSeven": "Trust him, but still keep your eyes open.",
-        "fortuneEight": "It would be best to maintain a low profile for now.",
-        "fortuneNine": "You laugh now, wait until you get home."
-    },
-    {
-        "fortuneTen": "If your work is not done, blame it on the computer.",
-        "fortuneEleven": "Silence is virtual.",
-        "fortuneTwelve": "K.M.S. Keep mouth shut, the golden rule."
-    },
-    {
-        "fortuneThirteen": "The end is near..and it's all your fault.",
-        "fortuneFourteen": "That wasn't chicken.",
-        "fortuneFifteen": "Stop procrastinating - starting tomorrow."
-    }
-    ]
+var btn = document.getElementById("btn");
+
+btn.addEventListener("click", function(){
+    var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'http://github.com/Peterson22000/peterson22000.github.io/blob/master/fortunes.json');
+ourRequest.onload = function(){
+  var ourData = json.parse(ourRequest.responseText);
+  console.log(ourData[0]);
+};
+ourRequest.send();
+});
+
+
 
