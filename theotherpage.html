@@ -15,10 +15,18 @@
               height: 220px;
             }
             </style>
+
+            
             <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
             <script src="script.js"></script>
             <script>
+
+              function checkInfo(){
+              var username = document.getElementById("username").value;
+              }
+              
+
             $( function() {
               $( "#accordion" ).accordion({
                 heightStyle: "fill"
@@ -41,30 +49,30 @@
               <div id="accordion">
                 <h3>Yellow</h3>
                 <div>
-                   <button id="btn">1</button>
-                   <button id="btn2">2</button>
-                   <button id="btn3">3</button>
+                   <button id="btn1" onclick="alert('Look around; happiness is trying to catch you.')">1</button>
+                   <button id="btn2" onclick="alert('To truly find yourself you should play hide and seek alone.')">2</button>
+                   <button id="btn3" onclick="alert('You cant have everything where would you put it all')">3</button>
                    
                 </div>
                 <h3>Red</h3>
                 <div>
-                  <button id="btn4">1</button>
-                   <button id="btn5">2</button>
-                   <button id="btn6">3</button>
+                  <button id="btn4" onclick="alert('run.')">1</button>
+                   <button id="btn5" onclick="alert('The rubberbands are heading in the right direction.')">2</button>
+                   <button id="btn6" onclick="alert('Do or do not. There is no try')">3</button>
                   
                 </div>
                 <h3>Blue</h3>
                 <div>
-                  <button id="btn7">1</button>
-                  <button id="btn8">2</button>
-                  <button id="btn9">3</button>
+                  <button id="btn7" onclick="alert('Trust him, but still keep your eyes open.')">1</button>
+                  <button id="btn8" onclick="alert('It would be best to maintain a low profile for now.')" >2</button>
+                  <button id="btn9" onclick="alert('You laugh now, wait until you get home.')">3</button>
                  
                 </div>
                 <h3>Green</h3>
                 <div>
-                  <button id="btn10">1</button>
-                   <button id="btn11">2</button>
-                   <button id="btn12">3</button>
+                  <button id="btn10" onclick="alert('If your work is not done, blame it on the computer.')">1</button>
+                   <button id="btn11" onclick="alert('Silence is virtual.')">2</button>
+                   <button id="btn12" onclick="alert('K.M.S. Keep mouth shut, the golden rule.')">3</button>
                    
                 </div>
               </div>
@@ -72,6 +80,7 @@
 
             <fieldset>
                 <legend><b>1:Personal Information</b></legend>
+               <form action="submission.html" method="post" onsubmit="return checkInfo();"></form>
                 First Name: <br>
                 <input type= "text" name= "firstname"><br>
                 Last Name: <br>
